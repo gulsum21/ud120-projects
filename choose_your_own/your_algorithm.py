@@ -33,6 +33,13 @@ plt.show()
 
 
 
+from sklearn.model_selection import cross_val_score
+from sklearn.ensemble import AdaBoostClassifier
+clf=AdaBosstClassifier()
+clf.fit(features_train, labels_train)
+pred=clf.predict(features_test)
+from sklearn.metrics import accuracy_score
+print accuracy_score(pred, labels_test)
 
 
 
